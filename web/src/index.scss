@@ -1,0 +1,154 @@
+$default-font-color: #AFB1B6;
+$default-background: #2B303B;
+$darker-background: #303641;
+$active-font-folor: #D4D5D8;
+$active-background: #5294E2;
+
+body {
+  height: 100vh;
+
+  #root {
+    height: 100%;
+
+    & > div {
+      height: 100%;
+      display: flex;
+    }
+
+    sidebar {
+      background-color: $default-background;
+      color: $default-font-color;
+      z-index: 2;
+
+      .sidebar-header {
+        height: 53px;
+        width: 220px;
+        background-color: $darker-background;
+        border-bottom: 1px solid gray;
+        color: white;
+
+        h3 {
+          display: flex;
+          align-items: center;
+          margin: 0;
+          padding: 12px;
+
+          div {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      h5 {
+        text-transform: uppercase;
+        margin-left: 16px;
+      }
+
+      ul {
+        text-transform: lowercase;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          height: 28px;
+          width: 205px;
+
+          a {
+            color: $default-font-color;
+            padding-left: 16px;
+            padding-top: 3px;
+            display: list-item;
+            height: 100%;
+            width: 100%;
+
+            &:hover, &:focus {
+              color: $default-font-color;
+              background-color: $darker-background;
+              text-decoration: none;
+            }
+
+            &.active {
+              background-color: $active-background;
+              color: $active-font-folor;
+              border-radius: 0 5px 5px 0;
+            }
+
+            span:first-child {
+              margin-right: 10px;
+            }
+          }
+
+          &:last-child {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    nav {
+      position: fixed;
+      height: 53px;
+      width: 100%;
+      background-color: white;
+      z-index: 1;
+      border-bottom: 1px solid gray;
+      display: flex;
+      align-items: center;
+
+      h3 {
+        margin: 0 0 0 240px;
+        flex: 1 1 auto;
+      }
+
+      form {
+        margin: 0 10px 0 0;
+
+        label {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    main {
+      margin: 78px 25px 25px 25px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+
+      .media-list {
+        overflow-y: scroll;
+        flex: 1 1 auto;
+      }
+
+      .media {
+        img {
+          height: 64px;
+          width: 64px;
+        }
+      }
+
+      .media-object {
+        border-radius: 5px;
+      }
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+      }
+
+      #new-message-form {
+        position: relative;
+
+        .form-control {
+          border-width: 3px 1.5px 3px 3px;
+        }
+
+        .btn {
+          border-width: 3px;
+        }
+      }
+    }
+  }
+}

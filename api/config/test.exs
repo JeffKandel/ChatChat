@@ -14,6 +14,6 @@ config :api, Api.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "api_test",
+  database: "chatchat_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

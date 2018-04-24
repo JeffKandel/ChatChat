@@ -39,6 +39,8 @@ config :api, Api.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "api_dev",
+  database: "chatchat",
   hostname: "localhost",
   pool_size: 10
+
+import_config "dev.secret.exs"

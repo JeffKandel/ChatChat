@@ -1,147 +1,93 @@
 body {
-    height: 100vh;
-}
-
-body #root {
-    height: 100%;
-}
-
-body #root>div {
-    height: 100%;
-    display: flex;
-}
-
-body #root sidebar {
-    background-color: #2B303B;
-    color: #AFB1B6;
-    z-index: 2;
-}
-
-body #root sidebar .sidebar-header {
-    height: 53px;
-    width: 220px;
-    background-color: #303641;
-    border-bottom: 1px solid gray;
-    color: white;
-}
-
-body #root sidebar .sidebar-header h3 {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 12px;
-}
-
-body #root sidebar .sidebar-header h3 div {
-    margin-right: 10px;
-}
-
-body #root sidebar h5 {
-    text-transform: uppercase;
-    margin-left: 16px;
-}
-
-body #root sidebar ul {
-    text-transform: lowercase;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-body #root sidebar ul li {
-    height: 28px;
-    width: 205px;
-}
-
-body #root sidebar ul li a {
-    color: #AFB1B6;
-    padding-left: 16px;
-    padding-top: 3px;
-    display: list-item;
-    height: 100%;
-    width: 100%;
-}
-
-body #root sidebar ul li a:hover,
-body #root sidebar ul li a:focus {
-    color: #AFB1B6;
-    background-color: #303641;
-    text-decoration: none;
-}
-
-body #root sidebar ul li a.active {
-    background-color: #5294E2;
-    color: #D4D5D8;
-    border-radius: 0 5px 5px 0;
-}
-
-body #root sidebar ul li a span:first-child {
-    margin-right: 10px;
-}
-
-body #root sidebar ul li:last-child {
-    text-decoration: underline;
-}
-
-body #root nav {
-    position: fixed;
-    height: 53px;
-    width: 100%;
-    background-color: white;
-    z-index: 1;
-    border-bottom: 1px solid gray;
-    display: flex;
-    align-items: center;
-}
-
-body #root nav h3 {
-    margin: 0 0 0 240px;
-    flex: 1 1 auto;
-}
-
-body #root nav form {
-    margin: 0 10px 0 0;
-}
-
-body #root nav form label {
-    margin-right: 1rem;
-}
-
-body #root main {
-    margin: 78px 25px 25px 25px;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-body #root main .media-list {
-    overflow-y: scroll;
-    flex: 1 1 auto;
-}
-
-body #root main .media img {
-    height: 64px;
-    width: 64px;
-}
-
-body #root main .media-object {
-    border-radius: 5px;
-}
-
-body #root main>div {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-}
-
-body #root main #new-message-form {
-    position: relative;
-}
-
-body #root main #new-message-form .form-control {
-    border-width: 3px 1.5px 3px 3px;
-}
-
-body #root main #new-message-form .btn {
-    border-width: 3px;
-}
+  height: 100vh; }
+  body #root {
+    height: 100%; }
+    body #root > div {
+      height: 100%;
+      display: flex; }
+    body #root sidebar {
+      background-color: #2B303B;
+      color: #AFB1B6;
+      z-index: 2; }
+      body #root sidebar .sidebar-header {
+        height: 53px;
+        width: 220px;
+        background-color: #303641;
+        border-bottom: 1px solid gray;
+        color: white; }
+        body #root sidebar .sidebar-header h3 {
+          display: flex;
+          align-items: center;
+          margin: 0;
+          padding: 12px; }
+          body #root sidebar .sidebar-header h3 div {
+            margin-right: 10px; }
+      body #root sidebar h5 {
+        text-transform: uppercase;
+        margin-left: 16px; }
+      body #root sidebar ul {
+        text-transform: lowercase;
+        list-style-type: none;
+        margin: 0;
+        padding: 0; }
+        body #root sidebar ul li {
+          height: 28px;
+          width: 205px; }
+          body #root sidebar ul li a {
+            color: #AFB1B6;
+            padding-left: 16px;
+            padding-top: 3px;
+            display: list-item;
+            height: 100%;
+            width: 100%; }
+            body #root sidebar ul li a:hover, body #root sidebar ul li a:focus {
+              color: #AFB1B6;
+              background-color: #303641;
+              text-decoration: none; }
+            body #root sidebar ul li a.active {
+              background-color: #5294E2;
+              color: #D4D5D8;
+              border-radius: 0 5px 5px 0; }
+            body #root sidebar ul li a span:first-child {
+              margin-right: 10px; }
+          body #root sidebar ul li:last-child {
+            text-decoration: underline; }
+    body #root nav {
+      position: fixed;
+      height: 53px;
+      width: 100%;
+      background-color: white;
+      z-index: 1;
+      border-bottom: 1px solid gray;
+      display: flex;
+      align-items: center; }
+      body #root nav h3 {
+        margin: 0 0 0 240px;
+        flex: 1 1 auto; }
+      body #root nav form {
+        margin: 0 10px 0 0; }
+        body #root nav form label {
+          margin-right: 1rem; }
+    body #root main {
+      margin: 78px 25px 25px 25px;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column; }
+      body #root main .media-list {
+        overflow-y: scroll;
+        flex: 1 1 auto; }
+      body #root main .media img {
+        height: 64px;
+        width: 64px; }
+      body #root main .media-object {
+        border-radius: 5px; }
+      body #root main > div {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto; }
+      body #root main #new-message-form {
+        position: relative; }
+        body #root main #new-message-form .form-control {
+          border-width: 3px 1.5px 3px 3px; }
+        body #root main #new-message-form .btn {
+          border-width: 3px; }

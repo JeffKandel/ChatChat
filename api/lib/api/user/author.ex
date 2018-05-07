@@ -6,6 +6,7 @@ defmodule Api.User.Author do
   schema "authors" do
     field :image, :string
     field :name, :string
+    has_many :messages, Api.Chat.Message
 
     timestamps()
   end

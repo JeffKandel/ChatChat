@@ -10,6 +10,7 @@ defmodule ApiWeb.Router do
     get "/channels", ChannelController, :index
     get "/messages", MessageController, :index
     get "/messages/:id", MessageController, :show
+    post "/messages", MessageController, :create
     pipe_through :api
   end
 end

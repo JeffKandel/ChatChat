@@ -4,13 +4,13 @@ defmodule Api.Repo.Migrations.CreateMessages do
   def change do
     create table(:messages) do
       add :content, :string
-      add :channelId, references(:channels, on_delete: :nothing)
-      add :authorId, references(:authors, on_delete: :nothing)
+      add :channel_id, references(:channels, on_delete: :nothing)
+      add :author_id, references(:authors, on_delete: :nothing)
 
       timestamps()
     end
 
-    create index(:messages, [:channelId])
-    create index(:messages, [:authorId])
+    create index(:messages, [:channel_id])
+    create index(:messages, [:author_id])
   end
 end

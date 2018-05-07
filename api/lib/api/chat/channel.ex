@@ -5,6 +5,7 @@ defmodule Api.Chat.Channel do
 
   schema "channels" do
     field :name, :string
+    has_many :messages, Api.Chat.Message
 
     timestamps()
   end

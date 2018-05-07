@@ -35,7 +35,7 @@ defmodule Api.User do
       ** (Ecto.NoResultsError)
 
   """
-  def get_author!(id), do: Repo.get!(Author, id)
+  def get_author!(name), do: Repo.one!(from a in Author, where: a.name == ^name)
 
   @doc """
   Creates a author.

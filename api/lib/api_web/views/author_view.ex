@@ -3,7 +3,7 @@ defmodule ApiWeb.AuthorView do
   alias ApiWeb.AuthorView
 
   def render("index.json", %{authors: authors}) do
-    %{data: render_many(authors, AuthorView, "author.json")}
+    render_many(authors, AuthorView, "author.json")
   end
 
   def render("show.json", %{author: author}) do

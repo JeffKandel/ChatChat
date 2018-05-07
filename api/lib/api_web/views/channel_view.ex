@@ -3,7 +3,7 @@ defmodule ApiWeb.ChannelView do
   alias ApiWeb.ChannelView
 
   def render("index.json", %{channels: channels}) do
-    %{data: render_many(channels, ChannelView, "channel.json")}
+    render_many(channels, ChannelView, "channel.json")
   end
 
   def render("show.json", %{channel: channel}) do

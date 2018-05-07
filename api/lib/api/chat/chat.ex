@@ -114,7 +114,7 @@ defmodule Api.Chat do
 
   """
   def list_messages do
-    Repo.all(Message)
+    Repo.all(Message) |> Repo.preload(:author)
   end
 
   @doc """
@@ -131,7 +131,7 @@ defmodule Api.Chat do
       ** (Ecto.NoResultsError)
 
   """
-  def get_message!(id), do: Repo.get!(Message, id)
+  def get_message!(id), do: Repo.get!(Message, id) |> Repo.preload(:author)
 
   @doc """
   Creates a message.

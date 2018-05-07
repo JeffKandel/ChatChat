@@ -13,8 +13,8 @@ defmodule ApiWeb.MessageView do
   def render("message.json", %{message: message}) do
     %{id: message.id,
       content: message.content,
-      channelId: message.channelId,
-      authorId: message.authorId,
+      channelId: message.channel_id,
+      author: Map.take(message.author, [:id, :name, :image])
       }
   end
 end

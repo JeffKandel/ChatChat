@@ -5,6 +5,8 @@ defmodule Api.Chat.Message do
 
   schema "messages" do
     field :content, :string
+    field :channelId, :id
+    field :authorId, :id
 
     timestamps()
   end

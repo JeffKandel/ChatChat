@@ -6,6 +6,9 @@ defmodule ApiWeb.Router do
   end
 
   scope "/api", ApiWeb do
+    get "/authors", AuthorController, :index
+    get "/channels", ChannelController, :index
+    get "/messages", MessageController, :index
     pipe_through :api
   end
 end

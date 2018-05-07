@@ -34,7 +34,7 @@ defmodule ApiWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_api_key",
-    signing_salt: "LjpsetfH"
+    signing_salt: "7ErH29Xv"
 
   plug ApiWeb.Router
 

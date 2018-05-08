@@ -11,7 +11,7 @@ defmodule ApiWeb.MessageController do
     render(conn, "index.json", messages: messages)
   end
 
-  def create(conn, %{"message" => message_params}) do
+  def create(conn, message_params) do
     with {:ok, %Message{} = message} <- Chat.create_message(message_params) do
       conn
       |> put_status(:created)

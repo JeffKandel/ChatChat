@@ -40,9 +40,9 @@ const mapDispatchToProps = function (dispatch, ownProps) {
     handleSubmit (name, content, evt) {
       evt.preventDefault();
 
-      const { channelId } = ownProps;
+      const { channelId: channel_id } = ownProps;
 
-      dispatch(postMessage({ name, content, channelId }));
+      dispatch(postMessage({ name, content, channel_id }));
       dispatch(writeMessage(''));
     }
   };

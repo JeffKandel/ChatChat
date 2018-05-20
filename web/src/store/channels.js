@@ -1,5 +1,5 @@
 import axios from 'axios';
-import socket from '../socket';
+// import socket from '../socket';
 
 // ACTION TYPES
 const GET_CHANNEL = 'GET_CHANNEL';
@@ -36,7 +36,7 @@ export function postChannel (channel, history) {
       .then(res => res.data)
       .then(newChannel => {
         dispatch(getChannel(newChannel));
-        socket.emit('new-channel', newChannel);
+        // socket.emit('new-channel', newChannel);
         history.push(`/channels/${newChannel.id}`);
       });
   };

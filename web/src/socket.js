@@ -1,20 +1,34 @@
-import io from 'socket.io-client';
-import store, { getMessage, getChannel } from './store';
+import {Socket, Presence} from "phoenix"
 
-const socket = io(window.location.origin);
+let socket = new Socket("/socket", {
+  params: { user_id: window.location.search.split("=")[1] }
+})
 
-socket.on('connect', () => {
-  console.log('I am now connected to the server!');
+function renderOnlineUsers(presences) {
+  let response = ""
 
-  socket.on('new-message', message => {
-    store.dispatch(getMessage(message));
-  });
+  Presence.list(presences, (id, {metas: [first, ...rest]}) => {
+    let count = rest.length + 1
+    response += `<br>${id} (count: ${count})</br>`
+  })
 
-  socket.on('new-channel', channel => {
-    store.dispatch(getChannel(channel));
-  });
+  console.log(response)
+}
 
+socket.connect()
 
-});
+let presences = {}
 
-export default socket;
+let channel = socket.channel("room:lobby", {})
+
+channel.on("presence_state", state => {
+  presences = Presence.syncState(presences, state)
+  renderOnlineUsers(presences)
+})
+
+channel.on("presence_diff", diff => {
+  presences = Presence.syncDiff(presences, diff)
+  renderOnlineUsers(presences)
+})
+
+channel.join()

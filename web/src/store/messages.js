@@ -1,5 +1,5 @@
 import axios from 'axios';
-import socket from '../socket';
+// import socket from '../socket';
 
 // ACTION TYPES
 
@@ -40,7 +40,7 @@ export function postMessage (message) {
       .then(newMessage => {
         const action = getMessage(newMessage);
         dispatch(action);
-        socket.emit('new-message', newMessage);
+        // socket.emit('new-message', newMessage);
       });
   };
 }

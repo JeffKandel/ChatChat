@@ -3,7 +3,6 @@ import React from 'react';
 export default function Message (props) {
 
   const message = props.message;
-  console.log("message", message);
 
   return (
     <li className="media">

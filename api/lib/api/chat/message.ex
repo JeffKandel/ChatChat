@@ -22,7 +22,6 @@ defmodule Api.Chat.Message do
     |> cast(attrs, [:content, :channel_id])
     |> put_change(:author_id, author.id)
     |> IO.inspect
-    |> IO.inspect
     |> validate_required([:content, :channel_id, :author_id])
   end
 

@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import MessagesList from './MessagesList';
 import NewChannelEntry from './NewChannelEntry';
 import store, { fetchMessages, fetchChannels } from '../store';
-
+import socket from '../socket'
 export default class Main extends Component {
 
   componentDidMount () {

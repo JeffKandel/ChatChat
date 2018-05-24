@@ -2,7 +2,15 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:4000"
+    },
+    "/socket": {
+      "target": "ws://localhost:4000",
+      "ws": true
+    }
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "3",
